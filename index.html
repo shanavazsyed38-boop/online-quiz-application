@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Online Quiz Application</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><h1>Online Quiz Application</h1><span id="bestAll" class="best"></span></header>
+<main>
+  <section id="startScreen" class="card">
+    <h2>Choose a quiz category</h2>
+    <p class="muted">Answer the multiple-choice questions before the timer runs out. Your best score is saved on this device.</p>
+    <div id="categories" class="cats"></div>
+  </section>
+
+  <section id="quizScreen" class="card" hidden>
+    <div class="bar">
+      <span id="catName"></span>
+      <span id="progress"></span>
+      <span id="timer" class="timer" aria-live="polite"></span>
+    </div>
+    <h2 id="question"></h2>
+    <div id="options" class="opts"></div>
+    <div class="nav">
+      <button class="btn" id="prevBtn">Previous</button>
+      <button class="btn" id="nextBtn">Next</button>
+      <button class="btn primary" id="submitBtn">Submit quiz</button>
+    </div>
+  </section>
+
+  <section id="resultScreen" class="card" hidden>
+    <h2>Result: <span id="catResult"></span></h2>
+    <p class="big"><span id="score"></span> <span id="percent"></span></p>
+    <p id="bestMsg" class="muted"></p>
+    <div class="stats">
+      <div><b id="rTotal">0</b><span>Total questions</span></div>
+      <div><b id="rAttempted">0</b><span>Attempted</span></div>
+      <div><b id="rCorrect">0</b><span>Correct</span></div>
+      <div><b id="rWrong">0</b><span>Incorrect</span></div>
+    </div>
+    <div class="nav">
+      <button class="btn primary" id="restartBtn">Restart quiz</button>
+      <button class="btn" id="anotherBtn">Try another category</button>
+    </div>
+    <h3>Review answers</h3>
+    <div id="review"></div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
